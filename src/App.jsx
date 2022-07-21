@@ -4,24 +4,28 @@ import { useState, useEffect } from 'react'
 import NavBar from "./components/NavBar";
 import CardArea from "./components/CardArea";
 
-import getBeers from "./services/beer.service";
-
 const App = () => {
 const {beers, setBeers} = useState([])
+
+
+const getBeerData = () => {
   const API_URL = "https://api.punkapi.com/v2/beers"
 
-const updateBeers = async () =>{
-  const apiBeers = await getBeers();
-  setBeers(apiBeers)
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      console.log(jsonResponse)
+      setBeers(jsonResponse)
+  })
 }
 
-  return (
+getBeerData()
+
+return (
     <>
     <main className={styles.main}>
     <NavBar />
-    <CardArea beers={beers}/>
-
-    
+    <CardArea />
     </main>
     </>      
   );

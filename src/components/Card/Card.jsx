@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './Card.module.scss'
 
-const Card = () => {
+const Card = (props) => {
+const {beers}=props;
+
+
   return (
     <div className={styles.card}>
         <img className={styles.img}></img>
