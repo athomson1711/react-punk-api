@@ -8,7 +8,7 @@ const { beers } = props
   const getBeerCardsJsx = (beer) => {
     <div className={styles.card} key={beer.id}>
         <Card beer={beer} />
-  </div>
+    </div>
 }
 
   return <section className={styles.cards}>{beers.map(getBeerCardsJsx)}</section>
