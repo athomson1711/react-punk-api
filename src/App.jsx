@@ -25,7 +25,7 @@ return (
     <>
     <main className={styles.main}>
     <NavBar />
-    <CardArea />
+    <CardArea beers={beers}/>
     </main>
     </>      
   );
