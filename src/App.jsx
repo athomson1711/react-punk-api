@@ -12,7 +12,7 @@ const getBeerData = () => {
   const API_URL = "https://api.punkapi.com/v2/beers"
 
   fetch(API_URL)
-    .then((response) => response.json())
+    .then((res) => res.json())
     .then((jsonResponse) => {
       console.log(jsonResponse)
       setBeers(jsonResponse)
