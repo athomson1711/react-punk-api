@@ -2,15 +2,17 @@ import React from 'react'
 import styles from './Card.module.scss'
 
 const Card = (props) => {
-const {beers}=props;
+const {name, tagline, abv, description } = props.beer;
 
 
   return (
     <div className={styles.card}>
-        <img className={styles.img}></img>
+        <img className={styles.img} alt={name}></img>
         <section>
-            <h1>Beer Name</h1>
-            <p>Beer info...</p>
+            <h1>{name}</h1>
+            <h4>{tagline}</h4>
+            <p>ABV: {abv}%</p>
+            <p>{description}</p>
         </section>
     </div>
   )
