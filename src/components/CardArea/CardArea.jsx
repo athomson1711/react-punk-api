@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './CardArea.module.scss'
 import Card from '../Card/Card'
 
-const CardArea = () => {
+const CardArea = (props) => {
+
+
   return (
     <div className={styles.cardArea}>
         <Card />
