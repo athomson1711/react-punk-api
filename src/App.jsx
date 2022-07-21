@@ -1,10 +1,11 @@
-import stlyes from "./App.module.scss";
+import styles from "./App.module.scss";
+
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
     <>
-    
-    
+    <NavBar />
     </>  
   );
 }
