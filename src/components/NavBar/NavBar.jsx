@@ -4,12 +4,13 @@ import SearchBar from '../SearchBar'
 
 const NavBar = (props) => {
 
-  const {updateSearchText} = props;
+  const {getBeerData, setBeerName} = props;
 
   return (
     <>
     <div className={styles.NavBar}>
-    <SearchBar updateSearchText={updateSearchText}/>
+    <h1>PUNK API</h1>
+    <SearchBar getBeerData={getBeerData} setBeerName={setBeerName}/>
     </div>
 
     

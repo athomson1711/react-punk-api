@@ -7,10 +7,14 @@ import CardArea from "./components/CardArea";
 const App = () => {
 
 const [beers, setBeers] = useState([])
+const [beerName, setBeerName] = useState("");
 
 
 const getBeerData = () => {
-  const API_URL = "https://api.punkapi.com/v2/beers"
+
+  const searchBeerName = beerName ? `?beer_name=${beerName}` : "";
+
+  const API_URL = `https://api.punkapi.com/v2/beers${searchBeerName}`
 
   fetch(API_URL)
     .then((res) => res.json())
@@ -26,7 +30,7 @@ useEffect(() => {
 return (
     <>
     <main className={styles.main}>
-    <NavBar />
+    <NavBar getBeerData={getBeerData} setBeerName={setBeerName}/>
     <CardArea beers={beers}/>
     </main>
     </>      
