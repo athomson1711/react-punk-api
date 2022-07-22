@@ -12,8 +12,9 @@ const [beerName, setBeerName] = useState("");
 
 const getBeerData = () => {
 
-  const searchBeerName = beerName ? `?beer_name=${beerName}` : "";
+  const searchBeerName = beerName && `?beer_name=${beerName}`;
 
+  // const API_URL = `https://api.punkapi.com/v2/beers?${searchBeerName}&page=1&per_page=25`
   const API_URL = `https://api.punkapi.com/v2/beers${searchBeerName}`
 
   fetch(API_URL)
@@ -25,7 +26,7 @@ const getBeerData = () => {
 
 useEffect(() => {
   getBeerData()
-}, [])
+}, [beerName])
 
 return (
     <>
