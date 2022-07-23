@@ -8,14 +8,18 @@ const App = () => {
 
 const [beers, setBeers] = useState([])
 const [beerName, setBeerName] = useState("");
-
+const [highABV, setHighABV] = useState(true);
+const [isClassic, setIsClassic] = useState(false);
+const [lowPH, setIsLowPH] = useState(false);
 
 const getBeerData = () => {
 
-  const searchBeerName = beerName && `?beer_name=${beerName}`;
+  const searchBeerName = beerName && `beer_name=${beerName}`;
+
+  const filterHighABV = highABV  ? `&abv_gt=6.0`: "";
 
   // const API_URL = `https://api.punkapi.com/v2/beers?${searchBeerName}&page=1&per_page=25`
-  const API_URL = `https://api.punkapi.com/v2/beers${searchBeerName}`
+  const API_URL = `https://api.punkapi.com/v2/beers?${searchBeerName}${filterHighABV}`
 
   fetch(API_URL)
     .then((res) => res.json())
@@ -31,8 +35,8 @@ useEffect(() => {
 return (
     <>
     <main className={styles.main}>
-    <NavBar getBeerData={getBeerData} setBeerName={setBeerName}/>
-    <CardArea beers={beers}/>
+    <NavBar getBeerData={getBeerData} setBeerName={setBeerName} setHighABV={setHighABV}/>
+    <CardArea beers={beers} />
     </main>
     </>      
   );
