@@ -6,7 +6,7 @@ const SearchBar = (props) => {
 
   return (
     <div className={styles.search}>
-        <input type="text" placeholder='Search...' onInput={e => {
+        <input className={styles.searchInput}type="text" placeholder='Search...' onInput={e => {
           setBeerName(e.target.value);
           getBeerData()
         }}/>

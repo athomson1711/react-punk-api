@@ -13,8 +13,8 @@ const CardList = (props) => {
   
   // if lowPH true then filter and map the beers with condition, else render all the cards
 
-  // return <section className={styles.cards}> {beers.map(getBeerCardsJsx)} </section>
-  return lowPH ? <section className={styles.cards}> {beers.filter(beer => beer.ph < 4 ).map(getBeerCardsJsx)} </section> :  <section className={styles.cards}> {beers.map(getBeerCardsJsx)} </section>
+  // return <div className={styles.cards}> {beers.map(getBeerCardsJsx)} </div>
+  return lowPH ? <div className={styles.cardList}> {beers.filter(beer => beer.ph < 4 ).map(getBeerCardsJsx)} </div> :  <div className={styles.cardList}> {beers.map(getBeerCardsJsx)} </div>
 }
 
 export default CardList
