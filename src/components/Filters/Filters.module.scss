@@ -1,12 +1,20 @@
+@import '../../variables.scss';
+
 .filters{
+    width: 80%;
     margin: 5px;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1px;
     align-items: center;
-
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    justify-items: flex-start;
+    color: $primary-color;
+    
     input{
         margin: 15px 0;
+        border: 5px solid green;
     }
 }

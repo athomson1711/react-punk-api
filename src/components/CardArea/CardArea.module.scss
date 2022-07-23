@@ -1,6 +1,8 @@
+@import '../../variables.scss';
+
 .cardArea{
-    border: solid 4px black;
     width: 75vw;
     height: 100vh;
+    background-color: $tertiary-color;
 }
 
