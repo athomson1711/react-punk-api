@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './NavBar.module.scss'
 import SearchBar from '../SearchBar'
+import Filter from '../Filters'
 
 const NavBar = (props) => {
 
@@ -11,9 +12,8 @@ const NavBar = (props) => {
     <div className={styles.NavBar}>
     <h1>PUNK API</h1>
     <SearchBar getBeerData={getBeerData} setBeerName={setBeerName}/>
+    <Filter />
     </div>
-
-    
     </>  
   )
 }

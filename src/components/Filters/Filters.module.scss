@@ -1,0 +1,12 @@
+.filters{
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+    align-items: center;
+
+    input{
+        margin: 15px 0;
+    }
+}
