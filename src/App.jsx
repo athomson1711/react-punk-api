@@ -1,6 +1,5 @@
 import styles from "./App.module.scss";
 import { useState, useEffect } from 'react'
-
 import NavBar from "./components/NavBar";
 import CardArea from "./components/CardArea";
 
