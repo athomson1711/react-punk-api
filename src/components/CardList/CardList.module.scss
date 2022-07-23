@@ -1,16 +1,17 @@
 .cardList {
     overflow: scroll;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     justify-content: space-between;
     justify-items: center;
     padding: 5px;
     margin: 20px;
-    height: 98%;
+    height: 97%;
   
     .card {
-      height: 350px;
+      height: 380px;
+      width: 100%;
     }
   }
   

@@ -12,9 +12,7 @@
     background-color: $primary-color;
 
     .img{
-        border: dotted 2px green;
-        width: 25%;
-        height: 50%;
+        max-height: 70%;
         margin: auto;
     }
     
@@ -23,8 +21,11 @@
         }
 
     .beerInfo{
-        height: 50%;
+        height: 30%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     
     
         .descriptionContainer{
