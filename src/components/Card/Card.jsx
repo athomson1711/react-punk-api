@@ -11,9 +11,9 @@ const Card = (props) => {
       <section className={styles.beerInfo}>
         <h1>{name}</h1>
         {/* <h4>{tagline}</h4> */}
-        <div>
-          <p>ABV: {abv}%</p>
-          <p>PH: {ph}</p>
+        <div className={styles.beerStats}>
+          <p className={styles.borderbox}>ABV: {abv}%</p>
+          <p className={styles.borderbox}>PH: {ph}</p>
         </div>
         <p>First brewed: {first_brewed}</p>
         {/* <div className={styles.descriptionContainer}>
