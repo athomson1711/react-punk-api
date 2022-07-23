@@ -4,10 +4,10 @@ import CardList from '../CardList/CardList'
 import NotFound from '../NotFound/NotFound'
 
 const CardArea = (props) => {
-const { beers } = props;
+const { beers, lowPH} = props;
 
 const contentJsx = beers.length ? (
-    <CardList beers={beers} />
+    <CardList beers={beers} lowPH={lowPH}/>
   ) : (
     <NotFound />
   );

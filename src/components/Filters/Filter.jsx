@@ -3,7 +3,7 @@ import styles from './Filters.module.scss'
 
 const Filter = (props) => {
 
-  const {getBeerData,setBeerName, setHighABV, highABV, setIsClassic, isClassic} = props;
+  const {getBeerData, setHighABV, highABV, setIsClassic, isClassic, lowPH, setIsLowPH } = props;
 
   
   return (
@@ -19,7 +19,10 @@ const Filter = (props) => {
           getBeerData()
         }} ></input>
         <label for="acidicPH">{`Acidic ph (<4)`}</label>
-        <input type="checkbox" id="acidicPH" name="acidicPH"></input>
+        <input type="checkbox" id="acidicPH" name="acidicPH" onClick={e => {
+          setIsLowPH(!lowPH)
+          getBeerData()
+        }} ></input>
     </section>
 
   )
