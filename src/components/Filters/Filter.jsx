@@ -3,7 +3,7 @@ import styles from './Filters.module.scss'
 
 const Filter = (props) => {
 
-  const {getBeerData,setBeerName, setHighABV, highABV} = props;
+  const {getBeerData,setBeerName, setHighABV, highABV, setIsClassic, isClassic} = props;
 
   
   return (
@@ -14,7 +14,10 @@ const Filter = (props) => {
           getBeerData()
         }}></input>
         <label for="classicRange">{`Classic Range`}</label>
-        <input type="checkbox" id="classicRange" name="classicRange"></input>
+        <input type="checkbox" id="classicRange" name="classicRange" onClick={e => {
+          setIsClassic(!isClassic)
+          getBeerData()
+        }} ></input>
         <label for="acidicPH">{`Acidic ph (<4)`}</label>
         <input type="checkbox" id="acidicPH" name="acidicPH"></input>
     </section>
