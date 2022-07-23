@@ -8,7 +8,7 @@ const App = () => {
 
 const [beers, setBeers] = useState([])
 const [beerName, setBeerName] = useState("");
-const [highABV, setHighABV] = useState(true);
+const [highABV, setHighABV] = useState(false);
 const [isClassic, setIsClassic] = useState(false);
 const [lowPH, setIsLowPH] = useState(false);
 
@@ -30,12 +30,12 @@ const getBeerData = () => {
 
 useEffect(() => {
   getBeerData()
-}, [beerName])
+}, [beerName,highABV])
 
 return (
     <>
     <main className={styles.main}>
-    <NavBar getBeerData={getBeerData} setBeerName={setBeerName} setHighABV={setHighABV}/>
+    <NavBar getBeerData={getBeerData} setBeerName={setBeerName} setHighABV={setHighABV} highABV={highABV}/>
     <CardArea beers={beers} />
     </main>
     </>      
