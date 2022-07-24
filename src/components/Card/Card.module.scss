@@ -1,66 +1,32 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
-.card{
-    height: 100%;
-    width: 100%;
-    padding: 20px 14px;
-    text-align: center;
-    border-radius: 10px;
-    // display: flex;
-    // flex-direction: column;
-    align-items: center;
-    background-color: $primary-color;
+.beerCard {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  
+  &.faceDown {
+    transform: rotateY(180deg);
+  }
 
-    .img{
-        max-height: 70%;
-        margin: auto;
-    }
-    
-    h4{
-        font-style: italic;
-        }
+  .front {
+    position: absolute;
+    height: 400px;
+    width: 275px;
+    backface-visibility: hidden;
+  }
 
-    .beerInfo{
-        height: 30%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        
-        h1{
-            margin-top: 5px;
-            letter-spacing: 0.2px;
-        }
-
-
-        .beerStats{
-            display: flex;
-            justify-content: space-evenly;
-            margin: 10px;
-
-            .borderbox{
-                font-size: 0.9em;
-                padding: 8px;
-                border: 2px solid black;
-                border-radius: 20px;
-            }
-    
-        }
-    
-        .descriptionContainer{
-            height: 50%;
-            width: 100%;
-        }
-    
-        .description {
-            height: 100%;
-            width: 100%;
-            overflow: scroll;
-        }
-    }
-        
-    
+  .back {
+    position: relative;
+    height: 400px; 
+    width: 275px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
 }
-
-
-
