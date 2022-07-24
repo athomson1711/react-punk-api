@@ -3,13 +3,14 @@
 .cardFront{
     height: 100%;
     width: 100%;
+ 
     img{
         max-height: 60%;
         border-radius: 2px 2px 0 0;
     }
 
     .beerInfo{
-        height: 40%;
+        height: 30%;
         width: 100%;
         padding: 3px;
         border-top: none;
@@ -17,5 +18,23 @@
         display: flex;
         flex-direction: column;
         padding-top: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .beerStats{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+            .borderbox{
+                padding: 3%;
+                border: 3px solid $secondary-color-transparent;
+                border-radius: 12px;
+            }
+        }
+
+
     }
 }
