@@ -1,7 +1,7 @@
 import styles from "./App.module.scss";
 import { useState, useEffect } from 'react'
-import NavBar from "./components/NavBar";
-import CardArea from "./components/CardArea";
+import NavBar from './containers/NavBar'
+import CardArea from "./containers/CardArea";
 
 const App = () => {
 

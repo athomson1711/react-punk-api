@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './NavBar.module.scss'
-import SearchBar from '../SearchBar'
-import Filter from '../Filters'
+import SearchBar from '../../components/SearchBar'
+import Filter from '../../components/Filters'
 import logo from '../../assets/brewdogLogo.png'
+
 
 const NavBar = (props) => {
 
