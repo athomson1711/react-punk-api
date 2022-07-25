@@ -5,9 +5,10 @@ import CardFront from '../CardFront/CardFront';
 import {useState} from 'react'
 
 
+
 const Card = (props) => {
   const { beer } = props;
-const [isFaceDown, setIsFaceDown] = useState(false)
+  const [isFaceDown, setIsFaceDown] = useState(false)
 
 const flipStyles = isFaceDown ? styles.faceDown : "";
 

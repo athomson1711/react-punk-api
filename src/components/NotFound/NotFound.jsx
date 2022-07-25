@@ -4,8 +4,8 @@ import styles from './NotFound.module.scss'
 const NotFound = () => {
   return (
       <div className={styles.notfound}>
-        <h2>Page not found</h2>
-        <p>Unfortunately we couldn't find that page</p>
+        <h2>No result...</h2>
+        <p>Sorry, we couldn't find a beer to match that search, try again.</p>
       </div>
   )
 }
