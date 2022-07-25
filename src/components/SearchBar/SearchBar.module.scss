@@ -18,6 +18,18 @@
     padding: 8px 0;
     letter-spacing: 2px;
 
+    &:focus {
+        outline: none;
+        border-color: $secondary-color;
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+
+        &::placeholder{
+            color: transparent;
+        }
+
+      }
+  
     &::placeholder{
         color: $primary-color;
         letter-spacing: 2px;
