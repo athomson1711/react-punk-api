@@ -17,5 +17,24 @@
         margin: 4% 0;
         
     }
+
+    p{
+        color: $primary-color;
+        
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+  
+    }
+
+    a{
+        color:$primary-color;
+        text-decoration: none;
+        font-weight: bold;
+        
+
+    }
 }
 
