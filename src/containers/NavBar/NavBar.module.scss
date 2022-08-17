@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.NavBar{
+.NavBar {
     width: 25vw;
     height: 100vh;
     background-color: $secondary-color-transparent;
@@ -11,30 +11,50 @@
     align-items: center;
     border-right: 2px solid $secondary-color-transparent;
 
-    img{
+    nav {
+        width: 80%;
+        height: 5%;
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    img {
         max-height: 25%;
         max-width: 75%;
         margin: 4% 0;
-        
+
     }
 
-    p{
+    p {
         color: $primary-color;
-        
+
     }
 
-    nav{
+    nav {
         display: flex;
         flex-direction: row;
-  
+
     }
 
-    a{
-        color:$primary-color;
+    a {
+        color: $primary-color;
         text-decoration: none;
         font-weight: bold;
-        
+
 
     }
-}
 
+    button{
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+}
+}

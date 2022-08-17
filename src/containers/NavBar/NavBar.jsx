@@ -15,17 +15,20 @@ const NavBar = (props) => {
 
   return (
     <>
+  
+
       <div className={styles.NavBar}>
-        <p>{data.user}</p>
+      <nav>  <Link to='/'>Home</Link>
+        {!data.user ?
+          (<Link to='login'>Login</Link>) : (<SignOut />)}
+      </nav>
+      <p>{data.user}</p>
         <img alt="Brewdog Logo" src={logo}></img>
         <SearchBar getBeerData={getBeerData} setBeerName={setBeerName} />
-        <Filter getBeerData={getBeerData} setHighABV={setHighABV} highABV={highABV} setIsClassic={setIsClassic} isClassic={isClassic} lowPH={lowPH} setIsLowPH={setIsLowPH}/>
-          
-        <Link to='/'>Home</Link>
-        <nav>
-          { !data.user ? 
-          (<Link to='login'>Login</Link>) : (<SignOut />) }
-          </nav>
+        <Filter getBeerData={getBeerData} setHighABV={setHighABV} highABV={highABV} setIsClassic={setIsClassic} isClassic={isClassic} lowPH={lowPH} setIsLowPH={setIsLowPH} />
+
+      
+
       </div>
     </>
   )
