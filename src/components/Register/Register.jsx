@@ -4,7 +4,10 @@ import { app } from '../../firebase'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import {
   useNavigate
+, Link
 } from 'react-router-dom';
+
+import styles from './Register.module.scss'
 
 const Register = () => {
 
@@ -30,15 +33,20 @@ const Register = () => {
   }
 
   return (
-    <>
-      <div>REGISTRATION!</div>
+    <div className={styles.regArea}>
+    <div className={styles.reg}>
+    <h1>Enter your details below to register!</h1>
+      <div></div>
       <form onSubmit={handleCreateUser}>
         <input type="text" placeholder='Email...' />
         <input type="text" placeholder='Password...' />
         <button type="submit">Click to register</button>
       </form>
-
-    </>
+      <div><h2>Already got an account?</h2>
+            <Link to='../login'>Log in here</Link>
+                </div>
+        </div>
+        </div>
 
   )
 }

@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
+import styles from './Login.module.scss'
 import { UserContext } from '../../provider/UserProvider/UserProvider'
 import { app } from '../../firebase'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import {
-useNavigate,Link
+    useNavigate, Link
 } from 'react-router-dom';
 
 const Login = () => {
@@ -21,24 +22,26 @@ const Login = () => {
             userContext.setUser(response.user.email)
             alert('Welcome back to our app');
             navigate('/')
-            
+
         }).catch(e => {
             alert('sorry something went wrong')
         })
     }
 
     return (
-        <div>
+        <div className={styles.loginArea}>
+            <div className={styles.login}>
             <h1>Enter your details to login</h1>
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='Email...' />
-            <input type="text" placeholder='Password...' />
-            <button type="submit">Sign In</button>
-        </form>
-        <h2>Not got an account?</h2>
-        <Link to='../registration'>Sign up here</Link>
-    </div>
-
+            <form onSubmit={handleSubmit}>
+                <input type="text" placeholder='Email...' />
+                <input type="text" placeholder='Password...' />
+                <button type="submit">Sign In</button>
+            </form>
+            <div><h2>Not got an account?</h2>
+            <Link to='../registration'>Sign up here</Link>
+                </div>
+        </div>
+        </div>
     )
 }
 
