@@ -5,9 +5,11 @@ import styles from './CardList.module.scss'
 const CardList = (props) => {
   const { beers, lowPH} = props;
 
+
+
   const getBeerCardsJsx = (beer) => (
     <div className={styles.card} key={beer.id}>
-      <Card beer={beer} />
+      <Card beer={beer} toggleFav={props.toggleFav} />
     </div>
   )
   

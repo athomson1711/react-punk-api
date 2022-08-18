@@ -6,8 +6,12 @@ import NotFound from '../../components/NotFound'
 const CardArea = (props) => {
 const { beers, lowPH} = props;
 
+const toggleFav = (recipe) => {
+  recipe.isFav = !recipe.isFav;
+};
+
 const contentJsx = beers.length ? (
-    <CardList beers={beers} lowPH={lowPH}/>
+    <CardList beers={beers} lowPH={lowPH} toggleFav={toggleFav} />
   ) : (
     <NotFound />
   );

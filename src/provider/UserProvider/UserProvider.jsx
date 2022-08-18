@@ -10,8 +10,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
-
+// import getBeers from '../../service';
 
 export const UserContext = createContext({});
 
@@ -30,13 +29,9 @@ const UserProvider = () => {
   }
 
   const getBeerData = () => {
-
     const searchBeerName = beerName && `beer_name=${beerName}`;
-
     const filterHighABV = highABV ? `&abv_gt=6.0` : "";
-
     const filterIsClassic = isClassic ? `&brewed_before=01-2011` : "";
-
     const API_URL = `https://api.punkapi.com/v2/beers?${searchBeerName}${filterHighABV}${filterIsClassic}`
 
     fetch(API_URL)

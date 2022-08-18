@@ -7,7 +7,7 @@ import {useState} from 'react'
 
 
 const Card = (props) => {
-  const { beer } = props;
+  const { beer, toggleFav } = props;
   const [isFaceDown, setIsFaceDown] = useState(false)
 
 const flipStyles = isFaceDown ? styles.faceDown : "";
@@ -18,7 +18,7 @@ const flipStyles = isFaceDown ? styles.faceDown : "";
         <CardFront beer={beer}/>
       </div>
       <div className={styles.back}>
-        <CardBack beer={beer} />
+        <CardBack beer={beer} toggleFav={toggleFav}/>
       </div>
       
     </div>
