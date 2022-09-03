@@ -3,8 +3,7 @@
 
 [Project Link](https://punkapiv2.web.app "Link to Project")
 
-<img src=“/src/assets/punk-api.jpg” alt="Image of punk-api project" width="300px">
-
+<img src="src/assets/punk-api.jpg" alt="Image of punk-api project" width="300px">
 
 ### **Description**
 The purpose of this app is to provide users with an easy to read, and informative way to view the different beers available to them from the Brewdog API. The cards are displayed in a grid format, which allows the user to scroll through the different beer cards, and view the information about each beer when the card is clicked.
