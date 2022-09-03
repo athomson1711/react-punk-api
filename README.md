@@ -3,7 +3,7 @@
 
 [Project Link](https://punkapiv2.web.app "Link to Project")
 
-<img src=“src/assets/punk-api.jpg” alt="Image of punk-api project" width="300px">
+<img src=“/src/assets/punk-api.jpg” alt="Image of punk-api project" width="300px">
 
 
 ### **Description**
